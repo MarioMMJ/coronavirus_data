@@ -6,6 +6,10 @@ body {
     padding:0;
 }
 
+body{
+    min-width: 600px;
+}
+
 a.navbar-brand {
     font-weight: bold;
     font-size: 30px;
