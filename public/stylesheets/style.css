@@ -1,8 +1,122 @@
+html,
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    font: 14px;
+    font-family: 'Oxanium', cursive !important;
 }
 
-a {
-  color: #00B7FF;
+a.navbar-brand {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+
+/* BOTON DONACIONES*/
+
+.bmc-button img {
+    height: 34px !important;
+    width: 35px !important;
+    margin-bottom: 1px !important;
+    box-shadow: none !important;
+    border: none !important;
+    vertical-align: middle !important;
+}
+
+.bmc-button {
+    padding: 7px 10px 7px 10px !important;
+    line-height: 35px !important;
+    height: 51px !important;
+    text-decoration: none !important;
+    display: inline-flex !important;
+    color: #ffffff !important;
+    background-color: #5F7FFF !important;
+    border-radius: 5px !important;
+    border: 1px solid transparent !important;
+    padding: 7px 10px 7px 10px !important;
+    font-size: 28px !important;
+    letter-spacing: 0.6px !important;
+    box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5) !important;
+    -webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;
+    font-family: 'Cookie', cursive !important;
+    -webkit-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+    -o-transition: 0.3s all linear !important;
+    -webkit-transition: 0.3s all linear !important;
+    -moz-transition: 0.3s all linear !important;
+    -ms-transition: 0.3s all linear !important;
+    transition: 0.3s all linear !important;
+}
+
+.bmc-button:hover,
+.bmc-button:active,
+.bmc-button:focus {
+    -webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;
+    text-decoration: none !important;
+    box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;
+    opacity: 0.85 !important;
+    color: #ffffff !important;
+}
+
+
+/* BOTON DONACIONES*/
+
+.navbar {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.7);
+}
+
+.datos-totales .card {
+    margin-left: 10px;
+    margin-right: 10px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+.datos-totales .card p {
+    margin-bottom: 0;
+    font-size: 30px;
+}
+
+.card-body {
+    padding: 10px !important;
+}
+
+.card-title {
+    font-weight: bold;
+    margin-bottom: 0 !important;
+}
+
+h5.card-title {
+    color: #ff0000;
+}
+
+.titulo-noticia {
+    margin-bottom: 0;
+    font-size: 20px;
+}
+
+.noticia .card {
+    padding: 20px;
+    border: none;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+}
+
+.leermas {
+    font-size: 20px;
+    color: #ff0000;
+}
+
+.leermas:hover {
+    color: #ff0000;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+@keyframes blinking {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
 }
