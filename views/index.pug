@@ -8,52 +8,48 @@ block content
         a.bmc-button(target='_blank' href='https://www.buymeacoffee.com/MarioMMJ')
           img(src='https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg' alt='Donaciones')
     .mt-4.row.datos-totales.justify-content-center
-      .col-md-3.col-10.infectados.card
+      .col-md-2.col-5.infectados.card
         .card-body
           .card-title
             h5.card-title.text-center Infectados
           .card-body.text-center
-            p 90000
-      .col-md-3.col-10.curados.card
+            p #{totales.TotalCases}
+      .col-md-2.col-5.muertos.card
+        .card-body
+          .card-title
+            h5.card-title.text-center Muertos
+          .card-body.text-center
+            p #{totales.TotalDeaths}
+      .col-md-2.col-5.curados.card
         .card-body
           .card-title.text-center
             h5.card-title Curados
           .card-body.text-center
-            p 20000
-      .col-md-3.col-10.paises.card
+            p #{totales.TotalRecovered}
+      .col-md-2.col-5.paises.card
         .card-body
           .card-title.text-center
             h5.card-title Paises
           .card-body.text-center
-            p 78
+            p #{paises}
     .row.contenido.justify-content-center.mt-3
       .col-10.col-lg-6.noticias.mb-3
         h2.mb-0.ultimas-noticias Últimas Noticias
         small.text-muted Las noticias son actualizadas cada 10 minutos
-        
-        .row.noticia.mt-3
-          .col-12.card
-            h3.titulo-noticia Titulo de la Noticia
-            p.text-muted Cuerpo de la noticia
-            small 27/07/2020
-            a.mt-3.leermas(href="#") Leer más
-        .row.noticia.mt-3
-          .col-12.card
-            h3.titulo-noticia Titulo de la Noticia
-            p.text-muted Cuerpo de la noticia
-            small 27/07/2020
-            a.mt-3.leermas(href="#") Leer más
-        .row.noticia.mt-3
-          .col-12.card
-            h3.titulo-noticia Titulo de la Noticia
-            p.text-muted Cuerpo de la noticia
-            small 27/07/2020
-            a.mt-3.leermas(href="#") Leer más
+        each noticia in noticias
+          .row.noticia.mt-3
+            .col-12.card
+              h3.titulo-noticia 
+              p.text-muted #{noticia}
+              small #{fecha}
+              a.mt-3.leermas(href="#") Leer más
       .col-10.col-lg-4
         .row.tablasDatos
           .col-12.estadisticas
             h2.mb-0 Casos recientes
             small.text-muted Casos que se han detectado el día de hoy
+            h5.ultimoscasos.card-title.my-2.text-left Últimas 24H
+              span.ml-3.casos-recientes.text-muted.text-right #{totales.NewCases} infectados
           .col-12.paisesafectados
             h2.mb-0 Paises Afectados
             small.text-muted Estadísticas por paises, la información es recopila de diferentes sitios y contrastada. Actualizado cada 10 minutos.
@@ -66,9 +62,10 @@ block content
                   th Casos Activos
                   th Recuperados Totales
               tbody
-                tr
-                  th(scope='row') 1
-                  td Mark
-                  td Otto
-                  td @mdo
-                  td Mark
+                each val in estadisticasPaises
+                  tr
+                    th(scope='row') #{val["Country,Other"]}
+                    td #{val["TotalCases"]}
+                    td #{val["TotalDeaths"]}
+                    td #{val["ActiveCases"]}
+                    td #{val["TotalRecovered"]}

@@ -1,7 +1,7 @@
 var request = require("request");
 var cheerio = require("cheerio");
 var fs = require('fs');
-
+/*
 var proxyUrl = "http://" + "mmanji2" + ":" + "Minisdef03" + "@" + "10.7.180.112" + ":" + "80";
 
 var proxiedRequest = request.defaults({ 'proxy': proxyUrl });
@@ -49,28 +49,68 @@ proxiedRequest.get("https://www.worldometers.info/coronavirus/", function(err, r
     });
 
 });
+*/
 
 
 
 
-/*
 request({
     uri: "https://www.worldometers.info/coronavirus/",
   }, function(error, response, body) {
     var $ = cheerio.load(body);
-  
-    var _tabla = $("#main_table_countries tbody")[0];
-    var _rows = $(_tabla).find("tr");
-    for(var i = 0; i < _rows.length; i++){
-        var region = $(_rows[i]).find("td");
-        var _datos_region = [];
-        for(var x = 0; x < region.length; x++){
-            console.log(region[i]);
-            _datos_region.push($(region[i]).val());
+
+    $.fn.toJson = function() {
+
+        if (!this.is('table')) {
+            return;
         }
-        fs.appendFile('data/data.csv', _datos_region.join(", ") + "\n", function (err) {
-            if (err) throw err;
-            console.log('Saved!');
+
+        var results = [],
+            headings = [];
+
+        this.find('thead tr th').each(function(index, value) {
+            headings.push($(value).text());
         });
+
+
+        this.find('tbody tr').each(function(indx, obj) {
+            var row = {};
+            var tds = $(obj).children('td');
+            headings.forEach(function(key, index) {
+                var value = tds.eq(index).text();
+                row[key] = value;
+            });
+            results.push(row);
+        });
+
+        return results;
     }
-  });*/
+
+    $(function() {
+        $('#results').html(JSON.stringify($('#excel').toJson(), null, '\t'));
+    });
+
+    var json = $('#main_table_countries').toJson();
+
+    fs.writeFile('data/data.json', JSON.stringify(json), function(err) {
+        if (err) throw err;
+    });
+  });
+
+  request({
+    uri: "https://www.lavanguardia.com/vida/20200303/473948475682/coronavirus-covid-19-hoy-ultima-hora-espana-cataluna-madrid-sevilla-china-oms-ultimas-noticias-en-directo.html",
+  }, function(error, response, body) {
+    var $ = cheerio.load(body);
+    var noticias = $(".story-leaf-body .story-leaf-txt-p .comment");
+    var arr = []
+    for(var i = 0; i < noticias.length; i++){
+        arr.push($(noticias[i]).text().replace(/(\r\n|\n|\r)/gm, "").trim().replace(/\s\s+/gm," "))
+    }
+    console.log(arr);
+
+
+    fs.writeFile('data/noticias.json',JSON.stringify(arr.splice(0,5)), function(err) {
+        if (err) throw err;
+        console.log('Guardado');
+    });
+  });
