@@ -13,6 +13,14 @@
         "titulo": "La UdG limpia todos los espacios donde había estado la profesora infectada",
         "cuerpo": "La Universidad de Girona (UdG) ha comenzado una limpieza 'sistemática' de todos los espacios donde ha estado la profesora afectada por el coronavirus.",
         "url": "https://www.lavanguardia.com/vida/20200304/473956689282/coronavirus-espana-infectados-covid-19-china-contagios-casos-sintomas-fallecidos-madrid-barcelona-valencia-ultimas-noticias-ultima-hora-hoy-en-directo.html"
+    },
+    {
+        "id": 3,
+        "fecha": "04/03/2020",
+        "pagina": "El Pais",
+        "titulo": "Casi 3.000 afectados y 92 víctimas mortales en Irán. ",
+        "cuerpo": " El número de personas contagiadas por el nuevo coronavirus en Irán se aproxima ya a 3.000, con 2.922 casos confirmados hasta este miércoles y 92 víctimas mortales, según el último balance ofrecido por el portavoz del Ministerio de Salud, Kianush Jahanpur. Según el portavoz, en total se han realizado análisis a 8.532 personas en todo el país, de las que 2.922 han dado positivo por Covid-19.",
+        "url": "https://elpais.com/sociedad/2020-03-04/ultimas-noticias-del-coronavirus-en-directo.html"
     }
 
 ]
