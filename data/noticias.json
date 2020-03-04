@@ -21,6 +21,30 @@
         "titulo": "Casi 3.000 afectados y 92 víctimas mortales en Irán. ",
         "cuerpo": " El número de personas contagiadas por el nuevo coronavirus en Irán se aproxima ya a 3.000, con 2.922 casos confirmados hasta este miércoles y 92 víctimas mortales, según el último balance ofrecido por el portavoz del Ministerio de Salud, Kianush Jahanpur. Según el portavoz, en total se han realizado análisis a 8.532 personas en todo el país, de las que 2.922 han dado positivo por Covid-19.",
         "url": "https://elpais.com/sociedad/2020-03-04/ultimas-noticias-del-coronavirus-en-directo.html"
+    },
+    {
+        "id": 4,
+        "fecha": "04/03/2020",
+        "pagina": "ABC",
+        "titulo": "Un estudio descubre dos cepas, una más agresiva del nuevo virus",
+        "cuerpo": "Según un estudio de científicos chinos publicado por National Science Review, tras analizar 103 genomas del coronavirus han descubierto dos cepas.",
+        "url": "https://www.abc.es/sociedad/abci-coronavirus-israel-pondra-cuarentena-personas-llegadas-desde-espana-ultimas-noticias-202003041718_directo.html"
+    },
+    {
+        "id": 5,
+        "fecha": "04/03/2020",
+        "pagina": "El Periódico",
+        "titulo": "Valencia-Atalanta se jugará sin público",
+        "cuerpo": "La consellera de Sanitat de la Comunitat Valenciana, Ana Barceló, ha asegurado este miércoles que la decisión de que el partido del próximo martes, correspondiente a los octavos de final de la Liga de Campeones entre el Valencia y el Atalanta, se dispute a puerta cerrada en Mestalla es “definitiva e irrevocable”.",
+        "url": "https://www.elperiodico.com/es/sociedad/20200304/coronavirus-ultimas-noticias-directo-7817968"
+    },
+    {
+        "id": 6,
+        "fecha": "04/03/2020",
+        "pagina": "ABC",
+        "titulo": "La Comunidad Valenciana investiga dos casos más de dos personas fallecidas en febrero",
+        "cuerpo": "La Comunidad Valenciana investiga dos casos más de dos personas fallecidas en febrero, informó en rueda de prensa Ana Barceló, consejera de Sanidad de la comunidad.",
+        "url": "https://www.elperiodico.com/es/sociedad/20200304/coronavirus-ultimas-noticias-directo-7817968"
     }
 
 ]

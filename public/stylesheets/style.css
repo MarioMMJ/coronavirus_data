@@ -232,8 +232,8 @@ h5.card-title {
 .social-button {
 transition: all 0.4s;
 position: fixed;
-right: 25px;
-bottom: 25px;
+left: 25px;
+bottom: 40px;
 width: 60px;
 height: 60px;
 text-align: center;
@@ -320,7 +320,7 @@ transition-delay: 0s;
 background-color: #1EA551;
 }
 .social-button-open .social-point-open:nth-child(3) {
-right: 65px;
+right: -65px;
 bottom: 65px;
 }
 .social-button-open .social-point-open:nth-child(3):hover {
