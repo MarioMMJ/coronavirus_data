@@ -2,17 +2,13 @@ html,
 body {
     font: 14px;
     font-family: 'Oxanium', cursive !important;
-    margin:0;
-    padding:0;
-}
-
-body{
-    min-width: 600px;
+    margin: 0;
+    padding: 0;
 }
 
 a.navbar-brand {
     font-weight: bold;
-    font-size: 30px;
+    font-size: 26px;
 }
 
 
@@ -127,22 +123,34 @@ h5.card-title {
     }
 }
 
-@media (max-width:941px){
-    .datos-totales .card p{
-        font-size: 20px;
+@media (max-width:1070px) {
+    .datos-totales .card p {
+        font-size: 25px;
     }
 }
 
-.casos-recientes{
-    float:right;
+@media (max-width:941px) {
+    .datos-totales .card p {
+        font-size: 30px;
+    }
 }
 
-.ultimoscasos{
+.casos-recientes {
+    float: right;
+}
+
+.ultimoscasos {
     padding: 10px;
     border-top: 1px solid gray;
     border-bottom: 1px solid gray;
 }
 
-#tablePaises tbody td{
+#tablePaises tbody td {
     vertical-align: middle;
+}
+
+.cabecera {
+    position: sticky;
+    top: 0;
+    z-index: 999;
 }
