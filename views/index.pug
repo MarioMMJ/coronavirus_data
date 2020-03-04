@@ -1,6 +1,12 @@
 extends layout
 
 block content
+  .social-button(title='expand social media options')
+    i#social-icon.fas.fa-share-alt
+    a.social-point(hidden='' href='https://api.whatsapp.com/send?phone=&text=Metete%20en%20esta%20p%C3%A1gina%20para%20ver%20las%20estad%C3%ADsticas%20del%20coronavirus%20http://www.coronavirus-data.net/' target='_blank' rel='nofollow' title='Whatsapp')
+      i.fab.fa-whatsapp
+    a.social-point(hidden='' href='https://twitter.com/intent/tweet?text=Aqu%C3%AD%20se%20pueden%20ver%20las%20estad%C3%ADsticas%20del%20coronavirus%20http://www.coronavirus-data.net/' target='_blank' rel='nofollow' title='Twitter')
+      i.fab.fa-twitter
   .main-content.container-fluid
     .row.cabecera
       nav.navbar.navbar-light.bg-light.col-12
