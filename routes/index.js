@@ -22,7 +22,7 @@ router.get('/', function(req, res, next) {
     totales["TotalRecovered"] = totales["TotalRecovered"].replace(",", "");
     totales["ActiveCases"] = totales["ActiveCases"].replace(",", "");
     totales["Serious,Critical"] = totales["Serious,Critical"].replace(",", "");
-    res.render('index', { totales: totales, paises: json.length, estadisticasPaises: json, noticias: noticias_json, fecha: (d.getDay() + 1) + "/" + (d.getMonth() + 1) + "/" + d.getFullYear() });
+    res.render('index', { totales: totales, paises: json.length, estadisticasPaises: json, noticias: noticias_json.reverse(), fecha: (d.getDay() + 1) + "/" + (d.getMonth() + 1) + "/" + d.getFullYear() });
 });
 
 module.exports = router;

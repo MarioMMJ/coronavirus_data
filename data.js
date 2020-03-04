@@ -44,21 +44,3 @@ request({
         if (err) throw err;
     });
 });
-
-request({
-    uri: "https://www.lavanguardia.com/vida/20200303/473948475682/coronavirus-covid-19-hoy-ultima-hora-espana-cataluna-madrid-sevilla-china-oms-ultimas-noticias-en-directo.html",
-}, function(error, response, body) {
-    var $ = cheerio.load(body);
-    var noticias = $(".story-leaf-body .story-leaf-txt-p .comment");
-    var arr = []
-    for (var i = 0; i < noticias.length; i++) {
-        arr.push($(noticias[i]).text().replace(/(\r\n|\n|\r)/gm, "").trim().replace(/\s\s+/gm, " "))
-    }
-    console.log(arr);
-
-
-    fs.writeFile('data/noticias.json', JSON.stringify(arr.splice(0, 5)), function(err) {
-        if (err) throw err;
-        console.log('Guardado');
-    });
-});

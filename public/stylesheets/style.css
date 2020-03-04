@@ -11,6 +11,12 @@ a.navbar-brand {
     font-size: 26px;
 }
 
+@media (max-width:420px) {
+    a.navbar-brand {
+        font-size: 20px;
+    }
+}
+
 
 /* BOTON DONACIONES*/
 

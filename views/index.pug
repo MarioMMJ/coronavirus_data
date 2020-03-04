@@ -40,13 +40,15 @@ block content
       .col-12.col-lg-4.noticias.mb-3
         h2.mb-0.ultimas-noticias Últimas Noticias
         small.text-muted Las noticias son actualizadas cada 10 minutos
+        -var cont = 0
         each noticia in noticias
-          .row.noticia.mt-3
-            .col-12.card
-              h3.titulo-noticia 
-              p.text-muted #{noticia}
-              small #{fecha}
-              a.mt-3.leermas(href="#") Leer más
+          if cont < 7
+            .row.noticia.mt-3
+              .col-12.card
+                h3.titulo-noticia #{noticia.titulo}
+                p.text-muted #{noticia.cuerpo}
+                small #{noticia.fecha} | #{noticia.pagina}
+                a.mt-3.leermas(href=noticia.url target="_blank") Leer más
       .col-12.col-lg-6
         .row.tablasDatos
           .col-12.estadisticas

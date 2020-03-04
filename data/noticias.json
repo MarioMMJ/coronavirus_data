@@ -1,1 +1,18 @@
-["13:36 Se trata de dos mujeres ingresadas en el Hospital Clínico de València que no han viajado a las zonas de riesgo por la epidemia de coronavirus, que presentan sintomatología leve y se encuentran en aislamiento domiciliario.","13:32 COMUNITAT VALENCIANA |Dos nuevos casos elevan a diecisiete las personas que han dado positivo al coronavirus en la Comunitat Valenciana, según ha confirmado este martes la consellera de Sanidad, Ana Barceló.","13:28 El estado del resto de pacientes confirmados por coronavirus en Andalucía sigue siendo estable, algunos de ellos asintomáticos, y continúan en seguimiento activo en su domicilio con todas las garantías de seguridad y atención, tal y como dictaminan los protocolos del Ministerio de Sanidad para estos casos.","13:24 Este sería el único paciente ingresado en Andalucía por este causa, después de que este lunes el primer paciente confirmado por coronavirus en Andalucía, un hombre de 62 años que se encontraba ingresado en el Hospital Universitario Virgen del Rocío de Sevilla, fuera dado de alta tras dar negativo en los análisis que se le realizaron en las últimas horas.👉El otro paciente que fue ingresado por coronavirus, un ciudadano de 28 años residente en Milán (Italia) que estaba en el Hospital Mediterráneo de Almería, recibió el alta médica el pasado sábado.","13:20 MÁLAGA | La Consejería de Salud y Familias informa de un nuevo caso por coronavirus en Andalucía. Se trata de un hombre de 73 años, que en este momento se encuentra ingresado, en aislamiento, en la Unidad de Cuidados Intensivos del Hospital Virgen de la Victoria de Málaga.Así lo ha indicado en un comunicado la Consejería de Salud y Familias, que ha señalado que el Servicio de Medicina Preventiva estudia el origen del contagio."]
+[{
+        "id": 1,
+        "fecha": "04/03/2020",
+        "pagina": "La Vanguardia",
+        "titulo": "Se confirma un caso en una niña de cuatro años en Madrid",
+        "cuerpo": "Sobre el caso de la menor contagiada por el coronavirus en Madrid, se encuentra “ asintomática” y al parecer podría haber sido contagiada por uno de sus progenitores.",
+        "url": "https://www.lavanguardia.com/vida/20200304/473956689282/coronavirus-espana-infectados-covid-19-china-contagios-casos-sintomas-fallecidos-madrid-barcelona-valencia-ultimas-noticias-ultima-hora-hoy-en-directo.html"
+    },
+    {
+        "id": 2,
+        "fecha": "04/03/2020",
+        "pagina": "El Periódico",
+        "titulo": "La UdG limpia todos los espacios donde había estado la profesora infectada",
+        "cuerpo": "La Universidad de Girona (UdG) ha comenzado una limpieza 'sistemática' de todos los espacios donde ha estado la profesora afectada por el coronavirus.",
+        "url": "https://www.lavanguardia.com/vida/20200304/473956689282/coronavirus-espana-infectados-covid-19-china-contagios-casos-sintomas-fallecidos-madrid-barcelona-valencia-ultimas-noticias-ultima-hora-hoy-en-directo.html"
+    }
+
+]
