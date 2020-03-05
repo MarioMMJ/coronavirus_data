@@ -107,11 +107,12 @@ setInterval(function() {
         
         let feed2 = await parser.parseURL('https://www.abc.es/rss/feeds/abc_ultima.xml');
         feed2.items.forEach(item => {
-            if(item.title.toLowerCase().includes("coronavirus") || item.content.toLowerCase().includes("coronavirus")){
+            if(item.title.toLowerCase().includes("coronavirus") || item.content.split(".")[0].toLowerCase().includes("coronavirus")){
                 json.push({"titulo":item.title,"cuerpo":item.content.replace(/<[^>]*>/g, '').split(".")[0],"link":item.link,"pubDate":item.pubDate,"periodico":"ABC"});
             }
         });
-    
+        
+
         fs.writeFile('data/noticias.json', JSON.stringify(json.sort(custom_sort)), function(err) {
             if (err) throw err;
         });
