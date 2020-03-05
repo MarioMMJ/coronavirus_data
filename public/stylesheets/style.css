@@ -112,6 +112,7 @@ h5.card-title {
 .leermas {
     font-size: 20px;
     color: #ff0000;
+    text-align: right;
 }
 
 .leermas:hover {
