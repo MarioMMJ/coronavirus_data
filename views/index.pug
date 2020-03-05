@@ -54,8 +54,9 @@ block content
               .col-12.card
                 h3.titulo-noticia #{noticia.titulo}
                 p.text-muted #{noticia.cuerpo}
-                small #{noticia.fecha} | #{noticia.pagina}
-                a.mt-3.leermas(href=noticia.url target="_blank") Leer más
+                small #{noticia.pubDate} | #{noticia.periodico}
+                a.mt-3.leermas(href=noticia.link target="_blank") Leer más
+                -cont++
       .col-12.col-lg-6
         .row.tablasDatos
           .col-12.estadisticas
