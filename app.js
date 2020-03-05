@@ -112,6 +112,12 @@ setInterval(function() {
             }
         });
         
+        let feed3 = await parser.parseURL('https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/portada');
+        feed3.items.forEach(item => {
+            if(item.title.toLowerCase().includes("coronavirus") || item.content.toLowerCase().includes("coronavirus")){
+                json.push({"titulo":item.title,"cuerpo":item.content.replace(/<[^>]*>/g, '').split(".")[0],"link":item.link,"pubDate":item.pubDate,"periodico":"El Pais"});
+            }
+        });
 
         fs.writeFile('data/noticias.json', JSON.stringify(json.sort(custom_sort)), function(err) {
             if (err) throw err;

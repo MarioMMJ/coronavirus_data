@@ -45,6 +45,42 @@ request({
     });
 });
 
+function custom_sort(a, b) {
+    return new Date(a.pubDate).getTime() - new Date(b.pubDate).getTime();
+}
+
+let Parser = require('rss-parser');
+let parser = new Parser();
+(async () => {
+ 
+    let feed1 = await parser.parseURL('https://www.lavanguardia.com/mvc/feed/rss/internacional');
+    var json = [];
+    feed1.items.forEach(item => {
+        if(item.title.toLowerCase().includes("coronavirus") || item.content.toLowerCase().includes("coronavirus")){
+            json.push({"titulo":item.title,"cuerpo":item.content.replace(/<[^>]*>/g, '').split(".")[0],"link":item.link,"pubDate":item.pubDate,"periodico":"La Vanguardia"});
+        }
+    });
+    
+    let feed2 = await parser.parseURL('https://www.abc.es/rss/feeds/abc_ultima.xml');
+    feed2.items.forEach(item => {
+        if(item.title.toLowerCase().includes("coronavirus") || item.content.toLowerCase().includes("coronavirus")){
+            json.push({"titulo":item.title,"cuerpo":item.content.replace(/<[^>]*>/g, '').split(".")[0],"link":item.link,"pubDate":item.pubDate,"periodico":"ABC"});
+        }
+    });
+
+    let feed3 = await parser.parseURL('https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/portada');
+    feed3.items.forEach(item => {
+        if(item.title.toLowerCase().includes("coronavirus") || item.content.toLowerCase().includes("coronavirus")){
+            json.push({"titulo":item.title,"cuerpo":item.content.replace(/<[^>]*>/g, '').split(".")[0],"link":item.link,"pubDate":item.pubDate,"periodico":"El Pais"});
+        }
+    });
+
+    fs.writeFile('data/noticias.json', JSON.stringify(json.sort(custom_sort)), function(err) {
+        if (err) throw err;
+    });
+
+
+  })();
 
 
 
