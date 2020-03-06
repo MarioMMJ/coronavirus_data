@@ -393,10 +393,21 @@ h5.card-title {
     transition: all 0.5s ease 0s;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.22);
     height: 100%;
+    cursor: pointer;
 }
 
 .nav-pills .nav-link.active,
 .nav-pills .show>.nav-link {
     background: #ff0000 !important;
     box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.22);
+}
+
+.textoBotonesTabla {
+    color: #FF0000;
+    font-weight: bold;
+    text-align: center;
+}
+
+.textoBotonesTabla p {
+    margin-bottom: 0;
 }

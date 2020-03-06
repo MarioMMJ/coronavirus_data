@@ -67,15 +67,17 @@ block content
           .col-12.paisesafectados
             h2.mb-0 Paises Afectados
             small.text-muted Estadísticas por paises, la información es recopilada de diferentes sitios y contrastada. Actualizado cada 10 minutos.
+            .textoBotonesTabla.d-block.d-sm-none.mt-2(data-toggle="popover" data-placement="bottom" data-content="Es posible que si activas más de 2 a la vez se corte la tabla, pero se puede seguir leyendo los datos si deslizas hacia el lateral")
+              p Elige que datos mostrar
             ul.nav.nav-pills.nav-fill.row.d-flex.d-sm-none.botones-paises.mt-2.mb-2
               li.nav-item.col-6.mb-2
-                a.nav-link.active(data-toggle=".casos-totales" data-order="1") Casos Totales
+                a.nav-link.active(data-toggle=".casos-totales") Casos Tot.
               li.nav-item.col-6.mb-2
-                a.nav-link.active(data-toggle=".muertes-totales" data-order="2") Muertes Totales
+                a.nav-link.active(data-toggle=".muertes-totales") Muertes
               li.nav-item.col-6.mb-2
-                a.nav-link(data-toggle=".casos-activos" data-order="") Casos Activos
+                a.nav-link(data-toggle=".casos-activos") Casos Act.
               li.nav-item.col-6.mb-2
-                a.nav-link(data-toggle=".recuperados-totales" data-order="") Recuperados Totales
+                a.nav-link(data-toggle=".recuperados-totales") Recuperados
             table#tablePaises.table.table-hover.table-striped
               thead
                 tr

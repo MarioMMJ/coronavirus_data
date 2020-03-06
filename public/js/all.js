@@ -2,7 +2,7 @@ function randomNumber(min, max) {
     return Math.random() * (max - min) + min;
 }
 
-
+var popoverMostrado = false;
 
 $(document).ready(function() {
     $('.count').each(function() {
@@ -71,13 +71,15 @@ $(document).ready(function() {
         if ($(this).hasClass("active")) {
             $(this).toggleClass("active");
             $("table " + $(this).attr("data-toggle")).toggleClass("d-none");
-
-
         } else {
             $(this).toggleClass("active");
             $("table " + $(this).attr("data-toggle")).toggleClass("d-none");
+            if ($(".nav-pills .nav-link.active").length > 2 && !popoverMostrado) {
+                popoverMostrado = true;
+                $(".textoBotonesTabla").popover("show")
+                setTimeout(function() { $(".textoBotonesTabla").popover('hide') }, 4000);
+            }
         }
     });
 
-    $('.nav-link').css({ fill: "red", transition: "0.5s" });
 });
