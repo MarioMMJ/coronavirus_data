@@ -66,20 +66,30 @@ block content
               span.ml-3.casos-recientes.text-muted.text-right #{totales.NewCases} infectados
           .col-12.paisesafectados
             h2.mb-0 Paises Afectados
-            small.text-muted Estadísticas por paises, la información es recopila de diferentes sitios y contrastada. Actualizado cada 10 minutos.
+            small.text-muted Estadísticas por paises, la información es recopilada de diferentes sitios y contrastada. Actualizado cada 10 minutos.
+            ul.nav.nav-pills.nav-fill.row.d-flex.d-sm-none.botones-paises.mt-2.mb-2
+              li.nav-item.col-6.mb-2
+                a.nav-link.active(data-toggle=".casos-totales" data-order="1") Casos Totales
+              li.nav-item.col-6.mb-2
+                a.nav-link.active(data-toggle=".muertes-totales" data-order="2") Muertes Totales
+              li.nav-item.col-6.mb-2
+                a.nav-link(data-toggle=".casos-activos" data-order="") Casos Activos
+              li.nav-item.col-6.mb-2
+                a.nav-link(data-toggle=".recuperados-totales" data-order="") Recuperados Totales
             table#tablePaises.table.table-hover.table-striped
               thead
                 tr
                   th Pais
-                  th Casos Totales
-                  th Muertes Totales
-                  th Casos Activos
-                  th Recuperados Totales
+                  th.casos-totales Casos Totales
+                  th.muertes-totales Muertes Totales
+                  th.casos-activos.d-none.d-sm-table-cell Casos Activos
+                  th.recuperados-totales.d-none.d-sm-table-cell Recuperados Totales
               tbody
                 each val in estadisticasPaises
                   tr
                     th(scope='row') #{val["Country,Other"]}
-                    td #{val["TotalCases"]}
-                    td #{val["TotalDeaths"]}
-                    td #{val["ActiveCases"]}
-                    td #{val["TotalRecovered"]}
+                    td.casos-totales #{val["TotalCases"]}
+                    td.muertes-totales #{val["TotalDeaths"]}
+                    td.casos-activos.d-none.d-sm-table-cell #{val["ActiveCases"]}
+                    td.recuperados-totales.d-none.d-sm-table-cell #{val["TotalRecovered"]}
+            

@@ -4,19 +4,19 @@ function randomNumber(min, max) {
 
 
 
-$(document).ready(function () {
-    $('.count').each(function () {
+$(document).ready(function() {
+    $('.count').each(function() {
         var $this = $(this),
             countTo = $this.attr('data-count');
         $({ countNum: $this.text() }).animate({
             countNum: countTo
         }, {
-            duration: randomNumber(1000, 2000),
+            duration: randomNumber(1000, 1300),
             easing: 'swing',
-            step: function () {
+            step: function() {
                 $this.text(Math.floor(this.countNum));
             },
-            complete: function () {
+            complete: function() {
                 $this.text(this.countNum);
                 //alert('finished');
             }
@@ -43,7 +43,7 @@ $(document).ready(function () {
                 var menu_point = document.querySelectorAll(".social-point");
                 for (let i = 0; i < menu_point.length; i++) {
                     menu_point[i].classList.remove('social-point-open');
-                    setTimeout(function () {
+                    setTimeout(function() {
                         menu_point[i].hidden = true;
                     }, 800)
                 }
@@ -58,7 +58,7 @@ $(document).ready(function () {
                 var menu_point = document.querySelectorAll(".social-point");
                 for (let i = 0; i < menu_point.length; i++) {
                     menu_point[i].hidden = false;
-                    setTimeout(function () {
+                    setTimeout(function() {
                         menu_point[i].classList.add('social-point-open');
                     }, 200)
                 }
@@ -67,4 +67,17 @@ $(document).ready(function () {
     })
 
 
+    $(".nav-pills .nav-link").on("click", function() {
+        if ($(this).hasClass("active")) {
+            $(this).toggleClass("active");
+            $("table " + $(this).attr("data-toggle")).toggleClass("d-none");
+
+
+        } else {
+            $(this).toggleClass("active");
+            $("table " + $(this).attr("data-toggle")).toggleClass("d-none");
+        }
+    });
+
+    $('.nav-link').css({ fill: "red", transition: "0.5s" });
 });
