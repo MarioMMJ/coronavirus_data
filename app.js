@@ -49,7 +49,6 @@ setInterval(function() {
         uri: "https://www.worldometers.info/coronavirus/",
     }, function(error, response, body) {
         var $ = cheerio.load(body);
-        console.log("obteniendo datos");
         $.fn.toJson = function() {
 
             if (!this.is('table')) {
