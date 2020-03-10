@@ -411,3 +411,9 @@ h5.card-title {
 .textoBotonesTabla p {
     margin-bottom: 0;
 }
+
+.datos-totales .fa,
+.datos-totales .far {
+    color: red;
+    margin-left: 5px;
+}
