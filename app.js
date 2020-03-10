@@ -69,7 +69,7 @@ setInterval(function() {
                 var tds = $(obj).children('td');
                 headings.forEach(function(key, index) {
                     var value = tds.eq(index).text();
-                    row[key] = value.replace(",", "");;
+                    row[key] = value.replace(",", "");
                 });
                 results.push(row);
             });
