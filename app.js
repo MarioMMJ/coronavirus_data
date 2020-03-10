@@ -50,7 +50,6 @@ setInterval(function() {
         uri: "https://www.worldometers.info/coronavirus/",
     }, function(error, response, body) {
         var $ = cheerio.load(body);
-        console.log("obteniendo datos");
         $.fn.toJson = function() {
 
             if (!this.is('table')) {
@@ -70,7 +69,7 @@ setInterval(function() {
                 var tds = $(obj).children('td');
                 headings.forEach(function(key, index) {
                     var value = tds.eq(index).text();
-                    row[key] = value;
+                    row[key] = value.replace(",", "");;
                 });
                 results.push(row);
             });
