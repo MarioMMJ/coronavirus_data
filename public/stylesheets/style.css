@@ -151,7 +151,7 @@ h5.card-title {
     border-bottom: 1px solid gray;
 }
 
-.ultimoscasos:first-of-type{
+.ultimoscasos:first-of-type {
     border-top: 1px solid gray;
 }
 
@@ -413,4 +413,29 @@ h5.card-title {
 
 .textoBotonesTabla p {
     margin-bottom: 0;
+}
+
+.modal-rsss {
+    list-style: none;
+    padding-left: 0;
+    color: white;
+    display: inline-block;
+}
+
+.modal-rsss li a {
+    padding: 7px 15px;
+    display: block;
+    color: white;
+}
+
+li.modal-twitter {
+    background: #55acee;
+}
+
+li.modal-instagram {
+    background: #2e5e86;
+}
+
+li.modal-email {
+    background: #ff0000;
 }

@@ -24,8 +24,6 @@ $(document).ready(function() {
         });
     });
 
-
-
     var social_open = false
     window.addEventListener('load', () => {
         const menu = document.querySelector('.social-button');
@@ -82,4 +80,8 @@ $(document).ready(function() {
         }
     });
 
+});
+
+$(window).on("load", function() {
+    $("#Modal").modal("show")
 });

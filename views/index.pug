@@ -94,4 +94,31 @@ block content
                     td.muertes-totales #{val["TotalDeaths"]}
                     td.casos-activos.d-none.d-sm-table-cell #{val["ActiveCases"]}
                     td.recuperados-totales.d-none.d-sm-table-cell #{val["TotalRecovered"]}
-            
+  #Modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='ModalTitle', aria-hidden='true')
+    .modal-dialog.modal-dialog-centered(role='document')
+      .modal-content
+        .modal-header
+          h5#ModalTitle.modal-title Redes Sociales y Contacto
+          button.close(type='button', data-dismiss='modal', aria-label='Close')
+            span(aria-hidden='true') &times;
+        .modal-body
+          | Siguenos en nuestras redes sociales para estar siempre informado cuando salgan nuevas funcionalidades para la
+          | página.<br>
+          | También puedes utilizar nuestro correo electrónico para hacer preguntas o enviar alguna sugerencia!
+          ul.mt-3.modal-rsss
+            li.mt-2.modal-twitter
+              a(href="https://twitter.com/coronavirus_dt") 
+                i.mr-2.fab.fa-twitter
+                | coronavirus_dt
+            li.mt-2.modal-instagram
+              a(href="https://instagram.com/mario_s4")
+                i.mr-2.fab.fa-instagram  
+                | mario_s4
+            li.mt-2.modal-email
+              a(href="mailto:datacoronavirus@gmail.com")
+                i.mr-2.fas.fa-envelope
+                | datacoronavirus@gmail.com
+
+        .modal-footer
+          button.btn.btn-primary(type='button') Vale!
+          
