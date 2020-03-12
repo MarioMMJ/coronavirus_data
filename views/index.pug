@@ -79,7 +79,7 @@ block content
               li.nav-item.col-6.mb-2
                 a.nav-link(data-toggle=".recuperados-totales") Curados
               li.nav-item.col-6.mb-2
-                a.nav-link(data-toggle=".tasa-mortalidad") Tasa Mortalidad
+                a.nav-link(data-toggle=".tasa-mortalidad") Tasa Letalidad
             table#tablePaises.table.table-hover.table-striped
               thead
                 tr
@@ -88,7 +88,7 @@ block content
                   th.muertes-totales Muertes Totales
                   th.casos-activos.d-none.d-sm-table-cell Casos Activos
                   th.recuperados-totales.d-none.d-sm-table-cell Curados Totales
-                  th.tasa-mortalidad.d-none.d-sm-table-cell Tasa Mortalidad
+                  th.tasa-mortalidad.d-none.d-sm-table-cell Tasa Letalidad
               tbody
                 each val in estadisticasPaises
                   -var tasamort = parseFloat(val["TotalDeaths"]/val["TotalCases"]*100).toFixed(2)
