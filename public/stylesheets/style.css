@@ -415,17 +415,28 @@ h5.card-title {
     margin-bottom: 0;
 }
 
+.modal {
+    text-align: center;
+    padding-right: 0px !important;
+}
+
 .modal-rsss {
     list-style: none;
     padding-left: 0;
     color: white;
-    display: inline-block;
+    text-align: center;
 }
 
 .modal-rsss li a {
     padding: 7px 15px;
     display: block;
     color: white;
+    border-radius: 0.25rem;
+}
+
+.modal-rsss li {
+    border-radius: .25rem;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.22);
 }
 
 li.modal-twitter {
@@ -440,12 +451,12 @@ li.modal-email {
     background: #ff0000;
 }
 
-.btn.btn-red{
+.btn.btn-red {
     color: #fff;
     background-color: #ff0000;
     border-color: #ff0000;
 }
 
-.btn.btn-red:hover{
+.btn.btn-red:hover {
     color: #fff;
 }

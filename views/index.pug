@@ -100,12 +100,12 @@ block content
                     td.recuperados-totales.d-none.d-sm-table-cell #{val["TotalRecovered"]}
                     td.tasa-mortalidad.d-none.d-sm-table-cell #{tasamort}%
   #Modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='ModalTitle', aria-hidden='true')
-    .modal-dialog.modal-dialog-centered(role='document')
+    .modal-dialog.modal-dialog-centered.modal-lg(role='document')
       .modal-content
         .modal-body
-          | Siguenos en nuestras redes sociales para estar siempre informado cuando salgan nuevas funcionalidades para la
+          | Siguenos en nuestras <strong>redes sociales</strong> para estar siempre informado cuando salgan nuevas funcionalidades para la
           | página.<br>
-          | También puedes utilizar nuestro correo electrónico para hacer preguntas o enviar alguna sugerencia!
+          | También puedes utilizar nuestro <strong>correo electrónico</strong> para hacer preguntas o enviar alguna sugerencia!
           ul.mt-3.modal-rsss
             li.mt-2.modal-twitter
               a(href="https://www.twitter.com/coronavirus_dt" target="_blank") 
@@ -115,11 +115,14 @@ block content
               a(href="https://www.instagram.com/mario_s4" target="_blank")
                 i.mr-2.fab.fa-instagram  
                 | mario_s4
-            li.mt-2.modal-email 
+            li.mt-2.modal-email
               a(href="mailto:datacoronavirus@gmail.com" target="_blank")
                 i.mr-2.fas.fa-envelope
                 | datacoronavirus@gmail.com
-
+          | También hay que decir que esta página no tiene ningún tipo de anuncio y los servidores son pagados
+          | con las donaciones de la gente.<br> Si quereis donar <strong>que no es obligatorio obviamente</strong>, 
+          | podeís hacerlo en el icono del vaso de cafe que hay el la parte superior derecha de la página.
+          | Y os estaremos muy agradecidos!
         .modal-footer
-          button.btn.btn-red(type='button' data-dismiss="modal") Vale!
+          button.btn.btn-red(type='button' data-dismiss="modal") Cerrar!
           
