@@ -439,3 +439,13 @@ li.modal-instagram {
 li.modal-email {
     background: #ff0000;
 }
+
+.btn.btn-red{
+    color: #fff;
+    background-color: #ff0000;
+    border-color: #ff0000;
+}
+
+.btn.btn-red:hover{
+    color: #fff;
+}
