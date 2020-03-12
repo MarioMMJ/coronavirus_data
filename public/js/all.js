@@ -83,5 +83,11 @@ $(document).ready(function() {
 });
 
 $(window).on("load", function() {
-    $("#Modal").modal("show")
+
+    if (document.cookie.indexOf('visited=true') == -1) {
+        $("#Modal").modal("show")
+        var threeDays = 1000 * 60 * 60 * 24 * 3;
+        var expires = new Date((new Date()).valueOf() + threeDays);
+        document.cookie = "visited=true;expires=" + expires.toUTCString();
+    }
 });
